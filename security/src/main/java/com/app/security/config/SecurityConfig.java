@@ -30,6 +30,8 @@ public class SecurityConfig {
                                 .requestMatchers("/info").hasAnyRole("VIEW_INFO", "VIEW_ADMIN")
                                 .requestMatchers("/admin").hasRole("VIEW_ADMIN")
                                 .requestMatchers("/user/*").hasRole("VIEW_ADMIN")
+                                .requestMatchers("/secret/provider/").authenticated()
+                                .requestMatchers("/secret/provider/**").authenticated()
                                 .anyRequest().permitAll())
                 .logout((logout) -> logout
                         .logoutUrl("/logout")
