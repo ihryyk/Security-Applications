@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Blocked Users</title>
+</head>
+<body>
+<h2>Blocked Users</h2>
+
+<div th:each="user : ${blockedUsers}">
+    <p th:text="${user}"></p>
+</div>
+
+</body>
+</html>
