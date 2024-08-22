@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('release') {
             steps {
+                cd security
                 sh 'mvn clean install'
             }
         }
