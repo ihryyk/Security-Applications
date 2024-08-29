@@ -7,7 +7,7 @@ pipeline {
         stage('release') {
             steps {
                 dir('security') {
-                    sh 'mvn clean install'
+                    sh 'mvn clean install test'
                 }
             }
         }
